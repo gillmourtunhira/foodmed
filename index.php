@@ -19,8 +19,11 @@ $title_head = 'FoodMed Health 24/7';
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo esc_html( $title_head ); ?></title>
-    <?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 <body>
+	<div class="container">
+		<h3>Hello FoodMed</h3>
+	</div>
 </body>
 </html>

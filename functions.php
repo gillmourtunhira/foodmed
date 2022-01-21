@@ -16,10 +16,13 @@ define( 'PLUGINS_DIR_URL', plugin_dir_url( __FILE__ ) );
  * Fetches the custom stylesheet and embed it
  *
  * @return void
+ * <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.15/tailwind.css">
  */
 function med_loadcss() {
 	wp_register_style( 'medcss', get_template_directory_uri() . '/css/foodmed.css', array(), '1.0', 'all' );
+	wp_register_style( 'tailwindcss', 'https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css', array(), '2.2.19', 'all' );
 	wp_enqueue_style( 'medcss' );
+	wp_enqueue_style( 'tailwindcss' );
 }
 add_action( 'wp_enqueue_scripts', 'med_loadcss' );
 
